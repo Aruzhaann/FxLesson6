@@ -623,19 +623,21 @@
 //        this.diagnosis = diagnosis;
 //    }
 //}
-
+//
 //problem5
 //import java.util.ArrayList;
+//import java.util.Collections;
+//import java.util.Comparator;
 //
 //
 //public class Main {
 //    public static void main(String[] args) {
-//        Book book1 = new Book(1,"malenkyi prins","Sam","Astana",1998,240,"5000","kitap");
-//        Book book2 = new Book(2,"To myself tenderly","Oksana","Korea",2002,260,"6000","kitap");
-//        Book book3 = new Book(3,"Joie de vivro","Aruzhan","America",2003,280,"7000","kitap");
-//        Book book4 = new Book(4,"Ekinshi bolma","Timur","Dubai",2006,340,"1800","kitap");
-//        Book book5 = new Book(5,"Koshpendiler","Tamir","Taraz",2008,360,"9000","kitap");
-//        Book book6 = new Book(6,"Mahabbat qyzyq mol zhyldar","Dana","Aktau",2010,450,"10000","kitap");
+//        Book book1 = new Book(1,"malenkyi prins","Sam","Astana",1998,240,"500","kitap");
+//        Book book2 = new Book(2,"To myself tenderly","Oksana","Korea",2002,260,"200","kitap");
+//        Book book3 = new Book(3,"Joie de vivro","Aruzhan","America",2003,280,"100","kitap");
+//        Book book4 = new Book(4,"Ekinshi bolma","Timur","Dubai",2006,340,"300","kitap");
+//        Book book5 = new Book(5,"Koshpendiler","Tamir","Taraz",2008,360,"400","kitap");
+//        Book book6 = new Book(6,"Mahabbat qyzyq mol zhyldar","Dana","Aktau",2010,450,"250","kitap");
 //        ArrayList<Book> bookArrayList = new ArrayList<>();
 //        bookArrayList.add(book1);
 //        bookArrayList.add(book2);
@@ -643,6 +645,12 @@
 //        bookArrayList.add(book4);
 //        bookArrayList.add(book5);
 //        bookArrayList.add(book6);
+//
+//        Collections.sort(bookArrayList,new Sortbyprice());
+//        for(Book s:bookArrayList){
+//            System.out.println(s.getPrice());
+//        }
+//
 //        String author_google = "Oksana";
 //        ArrayList<Book> author = new ArrayList<>();
 //        for(Book d:bookArrayList){
@@ -771,6 +779,13 @@
 //
 //    public void setType_of_binding(String type_of_binding) {
 //        this.type_of_binding = type_of_binding;
+//    }
+//}
+//class Sortbyprice implements Comparator<Book>{
+//
+//    @Override
+//    public int compare(Book first, Book second) {
+//        return first.getPrice().compareTo(second.getPrice());
 //    }
 //}
 
